@@ -14,4 +14,7 @@
 (load "init-keys") ;; Emacs keys bindings
 (load "init-gui")  ;; Emacs GUI configurations
 
-
+;; Slime
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "sbcl")

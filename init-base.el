@@ -22,10 +22,10 @@
 ;; Syntax-highlight
 (global-font-lock-mode t)
 
-;; Time mode
-(display-time-mode 1)
-(setq display-time-24hr-format t)
-(setq display-time-day-and-date t)
+;; Time mode                                ;; Not required (Powerline)
+;;(display-time-mode 1)
+;;(setq display-time-24hr-format t)
+;;(setq display-time-day-and-date t)
 
 ;; Return at 80th column
 (setq default-fill-column 80)
@@ -44,4 +44,5 @@
 
 
 ;; Theme
+(add-to-list 'load-path "~/.emacs.d/vendor/")
 (require 'monokai-theme)

@@ -18,8 +18,3 @@
 (global-set-key [f11] 'end-kbd-macro)
 (global-set-key [f12] 'call-last-kbd-macro)
 
-;; Lisp implementation
-;;(setq inferior-lisp-program "/usr/local/bin/sbcl")
-;;(add-to-list 'load-path "~/hacking/lisp/slime/")
-;;(require 'slime)
-;;(slime-setup 
