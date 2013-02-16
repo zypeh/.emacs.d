@@ -13,6 +13,7 @@
 (load "init-base") ;; Emacs basic configurations
 (load "init-keys") ;; Emacs keys bindings
 (load "init-gui")  ;; Emacs GUI configurations
+(load "init-mu4e") ;; Emacs mu4e email client configurations
 
 ;; Slime
 (load (expand-file-name "~/quicklisp/slime-helper.el"))

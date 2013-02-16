@@ -1,11 +1,5 @@
 ;; Keybindings
 
-;; Rainbow delimiters
-(add-to-list 'load-path "~/.emacs.d/vendor")
-(require 'rainbow-delimiters)
-; enable this rainbow parentheses globally
-(global-rainbow-delimiters-mode)
-
 ;; Font size
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
