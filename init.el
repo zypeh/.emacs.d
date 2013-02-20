@@ -10,11 +10,11 @@
 (add-to-list 'load-path "~/.emacs.d/") 
 
 ;; Load other configs
-(load "init-base") ;; Emacs basic configurations
-(load "init-keys") ;; Emacs keys bindings
-(load "init-gui")  ;; Emacs GUI configurations
-(load "init-mu4e") ;; Emacs mu4e email client configurations
-
+(load "init-base")   ;; Emacs basic configurations
+(load "init-keys")   ;; Emacs keys bindings
+(load "init-gui")    ;; Emacs GUI configurations
+(load "init-mu4e")   ;; Emacs mu4e email client configurations
+(load "init-el-get") ;; Emacs el-get configurations
 ;; Slime
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
