@@ -8,12 +8,12 @@
 (set-scroll-bar-mode nil)
  
 ;; Enable clipboard
-(setq x-select-enablr-clipboard t)
+(setq x-select-enable-clipboard t)
 
 ;; Notify current files location
 (setq frame-title-format "Emacs@%b")
 
-;; (?) Mouse avoidance mode
+;; Mouse avoidance mode
 (setq mouse-avoidance-mode 'animate)
 
 ;; Emacs powerline mode
