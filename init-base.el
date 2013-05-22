@@ -42,7 +42,6 @@
 ;; Not generate temp file anymore
 (setq backup-inhibited t) 
 
-
 ;; Theme
 (add-to-list 'load-path "~/.emacs.d/")
 (require 'monokai-theme)
