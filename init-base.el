@@ -1,9 +1,5 @@
 ;; init-base.el
 
-;; User setting
-(setq user-full-name "zypeh")
-(setq user-email-address "ciboy2011@gmail.com")
-
 ;; Remove Emacs and GNU booting screen
 (setq inhibit-startup-message t)
 (setq gnus-inhibit-startup-message t)
@@ -22,11 +18,6 @@
 ;; Syntax-highlight
 (global-font-lock-mode t)
 
-;; Time mode                                ;; Not required (Powerline)
-;;(display-time-mode 1)
-;;(setq display-time-24hr-format t)
-;;(setq display-time-day-and-date t)
-
 ;; Return at 80th column
 (setq default-fill-column 80)
 
@@ -42,6 +33,19 @@
 ;; Not generate temp file anymore
 (setq backup-inhibited t) 
 
-;; Theme
-(add-to-list 'load-path "~/.emacs.d/")
-(require 'monokai-theme)
+;; Remove tollbars and others useless thingy
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode nil)
+(transient-mark-mode t)
+(set-scroll-bar-mode nil)
+
+;; Enable clipboard
+(setq x-select-enable-clipboard t)
+
+;; Notify current files name
+(setq frame-title-format "Emacs@%b")
+
+;; MOuse avoidance mode
+(setq mouse-avoidance-mode 'animate)
+
