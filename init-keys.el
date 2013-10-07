@@ -1,9 +1,5 @@
 ;; Keybindings
 
-;; Font
-;; Programming only :)
-(set-default-font "Monaco-10")
-
 ;; Font size
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)

@@ -2,6 +2,9 @@
 ;; configure daily programming behavior.
 ;; usually affects globally (in prog-mode)
 
+;; Programmer No.1 Fonts
+(set-default-font "Source Code Pro 11")
+
 ;; Rainbow-delimiters
 (add-to-list 'load-path "~/.emacs.d/modules/rainbow-delimiters")
 (require 'rainbow-delimiters)
@@ -31,14 +34,11 @@
 ; Height limits for menu
 (setq ac-menu-height 20)
 
-; Colors
-(set-face-background 'ac-candidate-face "#89BDFF") ;; blue-light
-(set-face-foreground 'ac-candidate-face "#F92672") ;; magenta
-(set-face-background 'ac-selection-face "#A6E22A") ;; purple
-(set-face-foreground 'ac-selection-face "#F92672") ;; magenta
-
-
-
+; Colors (Torommow-Theme)
+(set-face-background 'ac-candidate-face "#282A2E") ;; Current-line
+(set-face-foreground 'ac-candidate-face "#969896") ;; Comment
+(set-face-background 'ac-selection-face "#373B41") ;; Selection
+(set-face-foreground 'ac-selection-face "#8ABEB7") ;; Aqua
 
 
 

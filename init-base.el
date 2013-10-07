@@ -4,13 +4,6 @@
 (setq inhibit-startup-message t)
 (setq gnus-inhibit-startup-message t)
 
-(add-to-list 'load-path "~/.emacs.d/")
-
-;; Set bookmarks
-(setq bookmark-default-file "~/emacs.d/.emacs.bmk")
-; Snyc bookmark files (.bmk)
-(setq bookmark-save-flag 1)
-
 ;; Parentheses
 (show-paren-mode t)
 (setq show-paren-style 'parentheses)
@@ -44,8 +37,30 @@
 (setq x-select-enable-clipboard t)
 
 ;; Notify current files name
-(setq frame-title-format "Emacs@%b")
+(setq frame-title-format "Emacs*%b*")
 
-;; MOuse avoidance mode
+;; Mouse avoidance mode
 (setq mouse-avoidance-mode 'animate)
+
+;; Hi-light current line
+(global-hl-line-mode 1)
+
+;; Line Numbers
+(global-linum-mode 1)
+
+;; Always end a file with a newline
+(setq require-final-newline nil)
+
+;; Smooth-scrolling 
+;; Mouse wheel & keyboard scroll on one line at a time
+(add-to-list 'load-path "~/.emacs.d/modules/smooth-scrolling")
+(require 'smooth-scrolling)
+(setq smooth-scroll-margin 10)
+
+(require 'smooth-scroll) 
+(smooth-scroll-mode t)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mouse 't)
+(setq scrool-step 1)
 
