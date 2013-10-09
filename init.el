@@ -1,20 +1,24 @@
-;; Init.el
+;; This is the init file that bootstrap all the configurations
+;; which is divided into a number of other files.
 
-;; Appearance
-(add-to-list 'load-path "~/.emacs.d/themes")
-(require 'color-theme-tomorrow)
-(color-theme-tomorrow--define-theme night)
+(add-to-list 'load-path "~/.emacs.d/")
+(require 'init-bechmarking)
 
-;; path allocation
-(add-to-list 'load-path "~/.emacs.d/") 
 
-;; Load other configs
-(load "init-base")     ;; Emacs basic configurations
-(load "init-modeline") ;; Emacs modeline configurations
-(load "init-keys")     ;; Emacs keys bindings
-(load "init-prog")     ;; Emacs general programming behavior
-(load "init-media")    ;; Emacs multimedia support configurations
+(load "init-base")     			
+(load "init-modeline") 			
+(load "init-keys")     			
+(load "theme-tomorrow-night")	        
+(load "init-prog")     					 
+(load "init-paredit")		
 
-;; Emacs language setup
-(load "init-c-lang")       ;; C/C++ languages
-(load "init-lisp-lang")    ;; Lisp support
+(load "init-c-lang")       
+(load "init-lisp-lang")    
+
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
+
+(message "init completed in %.2fms"
+	 (time-subtract-millis (current-time) before-init-time))
