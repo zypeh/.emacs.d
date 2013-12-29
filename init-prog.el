@@ -3,8 +3,9 @@
 ;; usually affects globally (in prog-mode)
 
 ;; Programmer No.1 Fonts
-(set-default-font "Source Code Pro 11")
-
+;(set-default-font "Inconsolata Mono-11")
+(set-face-attribute 'default nil :height 105)
+  
 ;; Rainbow-delimiters
 (add-to-list 'load-path "~/.emacs.d/modules/rainbow-delimiters")
 (require 'rainbow-delimiters)
