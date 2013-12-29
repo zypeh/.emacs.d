@@ -14,6 +14,8 @@
 
 (load "init-xterm")
 
+(load "init-web")
+
 (load "init-c-lang")       
 (load "init-lisp-lang")    
 (load "init-markdown")
