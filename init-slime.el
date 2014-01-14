@@ -1,10 +1,15 @@
 ;; Slime
 
 ; SLIME directory => (git) /usr/share/emacs/site-emacs/slime
+; Gentoo-er, remove this line
+(add-to-list 'load-path "~/.emacs.d/modules/slime")
+(require 'slime-autoloads)
+
+(setq slime-contribs '(slime-fancy))
 
 ;; Lisp System
 ; replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq inferior-lisp-program "sbcl")
 (require 'slime)
 ; (slime-setup)
 
