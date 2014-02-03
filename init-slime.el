@@ -11,10 +11,12 @@
 ; replace "sbcl" with the path to your implementation
 (setq inferior-lisp-program "sbcl")
 (require 'slime)
-; (slime-setup)
+(slime-setup)
 
 ;; Hooks
 (add-hook 'lisp-mode-hook          (lambda () (slime-mode t)))
 (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-lisp-mode t)))
+(require 'rainbow-delimiters)
+(add-hook 'slime-repl-mode-hook 'rainbow-delimiters-mode)
 
 (global-set-key (kbd "C-c C-c") 'slime-close-all-parens-in-sexp)
