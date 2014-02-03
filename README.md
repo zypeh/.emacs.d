@@ -30,6 +30,9 @@ This is the list of currenly I included.
 * slime
 * smooth-scrolling
 * web-mode
+* simple-httpd
+* impatient-mode
+* htmlize
 
 - Zypeh
 
