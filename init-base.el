@@ -44,6 +44,8 @@
 
 ;; Hi-light current line
 (global-hl-line-mode 1)
+(unless window-system
+  (set-face-background hl-line-face "#cd0000"))
 
 ;; Line Numbers
 (global-linum-mode 1)
