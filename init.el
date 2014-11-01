@@ -21,7 +21,7 @@
 (load "init-py-lang")                   ; Python language configurations
 (load "init-lisp-lang")                 ; Lisp dialects configurations
 (load "init-markdown")                  ; Markdown mode
-(load "init-golang")                    ; Go lang configurations
+(load "init-go-lang")                   ; Go lang configurations
 (load "init-slime")                     ; Slime controller
 
 (require 'server)
