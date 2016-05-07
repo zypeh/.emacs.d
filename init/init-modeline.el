@@ -35,3 +35,4 @@
 (setq powerline-color1 "#373B41")
 (setq powerline-color2 "#1D1F21")
 
+(provide 'init-modeline)

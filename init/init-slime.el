@@ -20,3 +20,5 @@
 (add-hook 'slime-repl-mode-hook 'rainbow-delimiters-mode)
 
 (global-set-key (kbd "C-c C-c") 'slime-close-all-parens-in-sexp)
+
+(provide 'init-slime)

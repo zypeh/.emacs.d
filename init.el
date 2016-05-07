@@ -7,25 +7,25 @@
 (require 'init-bechmarking)
 
 ;; Configuration
-(load "init-base")     			; Main configuration
-(load "init-modeline") 			; Modeline-thingy
-(load "init-keys")     			; Keybindings
+(require 'init-base)     			; Main configuration
+(require 'init-modeline) 			; Modeline-thingy
+(require 'init-keys)     			; Keybindings
 (load "packages")                       ; MELPA
 (when window-system
   (load "theme-tomorrow-night"))        ; Theme	        
 
-(load "init-prog")     			; Font's and parenthesis
-(load "init-paredit")		        ; Parenthesis matcher
-(load "init-xterm")                     ; Xterm
-(load "init-web")                       ; HTML,css,php,etc... 
-(load "init-c-lang")                    ; C language configurations
-(load "init-lua-lang")                  ; Lua language configurations
-(load "init-py-lang")                   ; Python language configurations
-(load "init-lisp-lang")                 ; Lisp dialects configurations
-(load "init-js-lang")                   ; Javascript language configurations
-(load "init-markdown")                  ; Markdown mode
-(load "init-go-lang")                   ; Go lang configurations
-(load "init-slime")                     ; Slime controller
+(require 'init-prog)     			; Font's and parenthesis
+(require 'init-paredit)		        ; Parenthesis matcher
+(require 'init-xterm)                     ; Xterm
+(require  'init-web)                       ; HTML,css,php,etc... 
+(require  'init-c-lang)                    ; C language configurations
+(require 'init-lua-lang)                  ; Lua language configurations
+(require 'init-py-lang)                   ; Python language configurations
+(require 'init-lisp-lang)                 ; Lisp dialects configurations
+(require 'init-js-lang)                   ; Javascript language configurations
+(require 'init-markdown)                  ; Markdown mode
+(require 'init-go-lang)                   ; Go lang configurations
+(require 'init-slime)                     ; Slime controller
 
 (require 'server)
 (unless (server-running-p)

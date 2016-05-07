@@ -41,19 +41,4 @@
 (set-face-background 'ac-selection-face "#373B41") ;; Selection
 (set-face-foreground 'ac-selection-face "#8ABEB7") ;; Aqua
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+(provide 'init-prog)

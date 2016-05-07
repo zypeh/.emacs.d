@@ -23,3 +23,4 @@
 (add-to-list 'load-path "~/.emacs.d/modules/imp.el")
 (require 'impatient-mode)
 
+(provide 'init-web)

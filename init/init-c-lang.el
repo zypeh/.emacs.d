@@ -43,3 +43,5 @@
 ;; INTIALIZE
 (add-hook 'c-mode-hook 'c-environment)
 (add-hook 'c-mode-hook '(lambda() (paredit-mode +1)))
+
+(provide 'init-c-lang)

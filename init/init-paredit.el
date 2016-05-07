@@ -6,4 +6,4 @@
   "Turn on pseudo-structural editing of Lisp code."
   t)
 
-
+(provide 'init-paredit)

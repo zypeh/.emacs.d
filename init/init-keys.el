@@ -12,3 +12,4 @@
 (global-set-key [f11] 'end-kbd-macro)
 (global-set-key [f12] 'call-last-kbd-macro)
 
+(provide 'init-keys)

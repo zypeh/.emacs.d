@@ -25,3 +25,5 @@
 ;; INITIALIZE
 (add-hook 'go-mode-hook 'go-environment)
 (add-hook 'go-mode-hook '(lambda() (paredit-mode +1)))
+
+(provide 'init-go-lang)
