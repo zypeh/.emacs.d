@@ -66,3 +66,11 @@
 (setq mouse-wheel-follow-mouse 't)
 (setq scrool-step 1)
 
+;; Global
+; (global-company-mode)
+ 
+;; Reduce the time after which the company auto completion popup opens
+; (setq company-idle-delay 0.2)
+
+;; Reduce the number of characters before company kicks in
+; (setq company-minimum-prefix-length 1)

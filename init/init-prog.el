@@ -4,7 +4,7 @@
 
 ;; Programmer No.1 Fonts
 ;(set-default-font "Inconsolata Mono-11")
-(set-face-attribute 'default nil :height 105)
+(set-face-attribute 'default nil :height 125)
   
 ;; Rainbow-delimiters
 (add-to-list 'load-path "~/.emacs.d/modules/rainbow-delimiters")
