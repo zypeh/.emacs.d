@@ -49,12 +49,11 @@
 ;; Not generate temp file anymore
 (setq backup-inhibited t) 
 
-;; Remove tollbars and others useless thingy
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode nil)
-(transient-mark-mode t)
-(set-scroll-bar-mode nil)
+;; Disable cursoe display in inactive windows
+(setq-default cursor-in-non-selected-windows nil)
+
+;; Redraw without pause
+(setq redisplay-dont-pause t)
 
 ;; Enable clipboard
 (setq x-select-enable-clipboard t)
@@ -64,30 +63,6 @@
 
 ;; Mouse avoidance mode
 (setq mouse-avoidance-mode 'animate)
-
-;; Hi-light current line
-(global-hl-line-mode 1)
-(unless window-system
-  (set-face-background hl-line-face "#cd0000"))
-
-;; Line Numbers
-(global-linum-mode 1)
-
-;; Always end a file with a newline
-(setq require-final-newline nil)
-
-;; Smooth-scrolling 
-;; Mouse wheel & keyboard scroll on one line at a time
-(add-to-list 'load-path "~/.emacs.d/modules/smooth-scrolling")
-(require 'smooth-scrolling)
-(setq smooth-scroll-margin 10)
-
-(require 'smooth-scroll) 
-(smooth-scroll-mode t)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
-(setq mouse-wheel-progressive-speed nil)
-(setq mouse-wheel-follow-mouse 't)
-(setq scrool-step 1)
 
 ;; Automatically scroll compilation window
 (setq compilation-scroll-output 1)
@@ -121,7 +96,7 @@
 
 ;; GC optimisation
 ;; Increase garbage collection threshold to 50MB (from 0.76MB)
-(setq gc-cons-threshold 50000000）
+(setq gc-cons-threshold 50000000)
 
 ;; Mac-port defaults
 (when (equal system-type 'darwin)

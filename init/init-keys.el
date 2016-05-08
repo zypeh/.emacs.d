@@ -1,4 +1,6 @@
-;; Keybindings
+;;
+;; File: init-keys.el
+;; Custom keybindings definitions
 
 ;; Font size
 (define-key global-map (kbd "C-+") 'text-scale-increase)
@@ -13,3 +15,4 @@
 (global-set-key [f12] 'call-last-kbd-macro)
 
 (provide 'init-keys)
+
