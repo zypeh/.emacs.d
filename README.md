@@ -1,6 +1,6 @@
 
 # Zypeh's Emacs Configs
-## since 2012
+## since 2012 | Reworked on 2016
 
 This is an emacs configuration tree that support a number of 
 programming languages.
@@ -15,26 +15,34 @@ else it will pop a warning message.
 Some of the tips or tricks might be useful to others, and some of them 
 are not...... that might annoy people who aren't me.
 
-# Package I used
+- zypeh
 
-This is the list of currenly I included.
+## installation
 
-* auto-complete
-* cc-mode
-* disaster
-* emacs-powerline
-* go-mode
-* markdow-mode
-* paredit
-* rainbow-delimiters
-* slime
-* smooth-scrolling
-* web-mode
-* simple-httpd
-* impatient-mode
-* htmlize
+### benchmarking
+we need the `benchmarking-init-el` to measure the time spent to load packages
+```bash
+git clone https://github.com/dholm/benchmark-init-el.git benchmark-init
+cd benchmark-init
+make
+```
 
-- Zypeh
+### code search
+we need the `silver_sercher` for code search
+```bash
+brew install the_silver_searcher
+```
+
+### markdown
+```bash
+brew install markdown
+```
+
+### javascript
+for code-analysis, we use `tern` for code completion
+```bash
+npm install -g tern
+```
 
 <hr>
 
