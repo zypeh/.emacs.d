@@ -33,6 +33,25 @@
              'variable-pitch nil
              :family sm/var-font-name)))
 
+;; Modeline
+;; -----------------
+(setq-default mode-line-fortmat
+              (quote
+               (
+                " "
+                ;; Mode string
+                (:propertize global-mode-string face 'mode-line-mode-string)
+                ;; Buffer string
+                (:propertize mode-line-buffer-identification face 'mode-line-buffer name)
+                " "
+                ;; Status
+                (:propertize mode-line-modified face 'mode-line-modified)
+                "  "
+                ;; Modes
+                (:propertize "%m" face 'mode-line-mode-name)
+                ;; Position
+                " :: Line %l, %p")))
+
 ;; frame hooks
 ;;------------------
 (defvar after-make-console-frame-hooks '()
@@ -50,4 +69,5 @@ Selectively runs either 'after-make-console-frame-hooks' or
                  'after-make-console-frame-hooks))))
 
 (add-hook 'after-make-frame-functions 'run-after-make-frame-hooks)
+
 (provide 'init-pref)
