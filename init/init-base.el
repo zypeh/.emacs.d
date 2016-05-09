@@ -100,8 +100,8 @@
 
 ;; Mac-port defaults
 (when (equal system-type 'darwin)
-  (setq mac-option-modifier 'meta)
-  (setq mac-command-modifier 'super)
+  (setq mac-option-modifier 'super)
+  (setq mac-command-modifier 'meta)
   (global-set-key [(super v)] 'yank)
   (global-set-key [(super q)] 'save-buffer-kill-emacs))
 
