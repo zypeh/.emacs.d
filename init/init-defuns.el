@@ -18,6 +18,11 @@
                (y-or-n-p (format "Directory `%s' doesn't exist! Create it?" parent-directory)))
       (make-directory parent-directory t))))
 
+;; Company-backends
+(defun sm/backend-with-yas (backend)
+  (append (if (consp backend) backend (list backend))
+          '(:with company-yasnippet)))
+
 ;; Provide this package
 (provide 'init-defuns)
 
