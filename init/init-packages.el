@@ -84,6 +84,18 @@
                      (null (string-match "\\([;{}]\\|\\b\\(if\\|for\\|while\\)\\b\\)"
                                          (thing-at-point 'line))))))
 
+;; Fish shell
+;; -----------------
+(use-package fish-mode
+  :init (add-hook 'fish-mode-hook (lambda ()
+                                    (add-hook 'before-save-hook 'fish_indent-before-save))))
+
+;; Environment thingy
+;; -----------------
+(use-package exec-path-from-shell
+  :config (when (memq window-system '(mac ns))
+            (exec-path-from-shell-initialize)))
+
 ;; code utils
 ;; -----------------
 (use-package rainbow-delimiters
@@ -138,6 +150,11 @@
   (setq ispell-extra-args '("--sug-mode=fast"))
   (setq flyspell-issue-message-flag nil)
   (setq flyspell-issue-welcome-flag nil))
+
+;; ELDoc
+;; -----------------
+(use-package eldoc
+  :config (add-hook 'emacs-lisp-mode-hook #'eldoc-mode))
 
 ;; expand-region
 ;; -----------------
@@ -253,6 +270,39 @@
             (lambda ()
               (setq tab-width 2
                     c-basic-offset 2))))
+
+;; Rust language
+;; ---------------
+(use-package rust-mode
+  :ensure t
+  :defer t
+  :mode "\\.rs\\'")
+
+(use-package flycheck-rust
+  :ensure t
+  :defer t
+  :init (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
+(use-package racer
+  :ensure t 
+  :config
+  ;; Path to racer
+  ;; (setq racer-cmd "~/.cargo/bin/racer")
+  ;; Path to rust src
+  ;; (setq racer-rust-src-path "~/Projects/Rust/rust/src/")
+  (add-hook 'rust-mode-hook #'racer-mode)
+  (add-hook 'racer-mode-hook #'eldoc-mode))
+
+;; (use-package company-racer
+;;   :defer t
+;;   :config (setq company-racer-property-marker " (R)")
+;;   :init (add-to-list 'company-backends 'company-racer))
+
+(use-package rustfmt
+  :config (define-key rust-mode-map (kbd "C-c C-f") #'rustfmt-format-buffer))
+
+(use-package toml-mode
+  :ensure t)
 
 ;; Don't show the compile-log
 (let ((buf (get-buffer "*Compile-Log*")))
