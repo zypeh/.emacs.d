@@ -44,6 +44,19 @@ for code-analysis, we use `tern` for code completion
 npm install -g tern
 ```
 
+## slime integration
+
+### hyperspec documentation
+Put the latest hyperspec documentation into directory `/usr/local/share/doc/hyperspec` and slime will automatically search for it
+
+```bash
+mkdir /usr/local/share/doc/hyperspec
+cd /usr/local/share/doc/hyperspec
+wget ftp://ftp.lispworks.com/pub/software_tools/reference/HyperSpec-7-0.tar.gz
+tar -zxvf HyperSpec-7.0.tar.gz
+rm HyperSpec-7.0.tar.gz
+```
+
 <hr>
 
 [![endorse] (http://api.coderwall.com/zypeh/endorsecount.png)] (http://coderwall.com/zypeh)

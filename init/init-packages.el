@@ -307,6 +307,20 @@
 (use-package toml-mode
   :ensure t)
 
+;; Slime
+(use-package slime
+  :ensure t
+  :init
+  (setq slime-contribs '(slime-fancy)
+        slime-complete-symbol-function 'slime-fuzzy-complete-symbol
+        slime-net-coding-system 'utf-8-unix
+        slime-lisp-implementations '((sbcl ("/usr/local/bin/sbcl"))))
+  :config
+  (setq
+   common-lisp-hyperspec-root "/usr/local/share/doc/hyperspec/Hyperspec"
+   common-lisp-hyperspec-symbol-table (concat common-lisp-hyperspec-root "Data/Map_Sym.txt")
+   common-lisp-hyperspec-issuex-table (concat common-lisp-hyperspec-root "Data/Map_IssX.txt")))
+
 ;; Don't show the compile-log
 (let ((buf (get-buffer "*Compile-Log*")))
   (when buf (delete-windows-on buf)))
