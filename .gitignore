@@ -1,6 +1,7 @@
-## Ingnore the dict-file
-ac-comphist.dat
-auto-save-list
+# Benchmarking
+benchmark-init
+elpa
+cache
 
 ## Ignore temperary file
 *~
