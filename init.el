@@ -19,5 +19,5 @@
 ;; (require 'init-modeline)
 (require 'init-keys)
 (require 'init-packages)
-
+(require 'init-tree)
 ;;; init.el ends here
