@@ -326,6 +326,15 @@
   :mode ("\\.scss\\'" . scss-mode)
   :init (setq scss-compile-at-save nil))
 
+;; Elixir
+(use-package elixir-mode
+  :mode (("\\.ex\\'" . elixir-mode)
+         ("\\.exs\\'" . elixir-mode))
+  :config
+  (company-quickhelp-mode -1)
+  (use-package alchemist
+    :diminish alchemist-mode))
+
 ;; Don't show the compile-log
 (let ((buf (get-buffer "*Compile-Log*")))
   (when buf (delete-windows-on buf)))
